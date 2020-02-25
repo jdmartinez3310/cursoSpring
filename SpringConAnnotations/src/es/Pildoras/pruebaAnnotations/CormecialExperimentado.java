@@ -1,5 +1,8 @@
 package es.Pildoras.pruebaAnnotations;
 
+import org.springframework.stereotype.Component;
+
+@Component("ComercialExperimentado")
 public class CormecialExperimentado implements Empleados {
 
 	@Override
