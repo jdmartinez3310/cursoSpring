@@ -20,18 +20,16 @@ public class UsoAnnotations2 {
 		
 		
 		// Pedir un bean al contenedor
-		Empleados Antonio = contexto.getBean("comercialExperimentado", Empleados.class);
-		
-		Empleados Lucia = contexto.getBean("comercialExperimentado", Empleados.class);
+		//Empleados empleado = contexto.getBean("directorFinanciero", Empleados.class);
+		DirectorFinanciero empleado = contexto.getBean("directorFinanciero", DirectorFinanciero.class);
 		
 		// Apuntan al mismo objeto
-		if(Antonio == Lucia) {
-			System.out.println("Apunta al mismo lugar en memoria");
-			System.out.println(Antonio + "\n" + Lucia);
-		} else {
-			System.out.println("No apuntan al mismo lugar en memoria");
-			System.out.println(Antonio + "\n" + Lucia);
-		}
+			System.out.println("Email del director: " + empleado.getEmail());
+			System.out.println("Nombre de la empresa: " + empleado.getNombreEmpresa());
+		
+			System.out.println(empleado.getTareas());
+			System.out.println(empleado.getInforme());
+		
 		
 		contexto.close();
 		
